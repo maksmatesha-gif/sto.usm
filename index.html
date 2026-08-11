@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>СТО US Service — Автосервис в Минске | Ремонт и обслуживание</title>
-  <meta name="description" content="Профессиональный автосервис в Минске. Диагностика, ТО, ремонт двигателя, ходовой, тормозов. Специализация на американских авто. ул. Глаголева 39">
+  <title>СТО US Service — Автосервис в Минске</title>
+  <meta name="description" content="Профессиональный автосервис в Минске. Диагностика, ТО, ремонт двигателя, ходовой, тормозов. Специализация на американских авто.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style-home.css">
 </head>
 <body>
   <header class="header">
@@ -21,46 +22,53 @@
       </nav>
       <div class="header-actions">
         <a href="tel:+375293028899" class="phone">+375 (29) 302-88-99</a>
-        <a href="kontakty.html#form" class="btn btn-primary">Записаться</a>
+        <a href="https://t.me/us_service" target="_blank" class="btn-telegram" aria-label="Telegram">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+        </a>
+        <a href="#" class="btn btn-primary" id="cta-open-modal">Записаться</a>
         <button class="menu-toggle" aria-label="Меню">☰</button>
       </div>
     </div>
   </header>
 
   <div id="mobile-nav" class="mobile-nav">
-    <button class="close" aria-label="Закрыть">×</button>
+    <button class="close">×</button>
     <a href="index.html">Главная</a>
     <a href="uslugi/index.html">Услуги</a>
     <a href="american-cars/index.html">Американские авто</a>
     <a href="o-kompanii.html">О компании</a>
     <a href="kontakty.html">Контакты</a>
     <a href="tel:+375293028899">+375 (29) 302-88-99</a>
+    <a href="https://t.me/us_service" target="_blank">Telegram</a>
+    <a href="#" id="mobile-cta-open-modal" style="color:var(--accent);font-weight:700;">Записаться</a>
   </div>
 
   <main class="main">
-    <section class="hero">
+    <!-- HERO -->
+    <section class="hero" id="hero">
       <div class="hero-bg"></div>
       <div class="container hero-content">
-        <div>
+        <div class="hero-text">
           <div class="hero-badge">● Автосервис в Минске · ул. Глаголева 39</div>
-          <h1>Ремонт и обслуживание автомобилей <span>на уровне</span></h1>
+          <h1>Ремонт и обслуживание автомобилей <span>на инженерном уровне</span></h1>
           <p class="hero-lead">Современное СТО с честной диагностикой, прозрачными ценами и специализацией на американских марках. Гарантия на все работы.</p>
           <div class="hero-cta">
-            <a href="kontakty.html#form" class="btn btn-primary btn-lg">Оставить заявку</a>
+            <a href="#" class="btn btn-primary btn-lg" id="cta-open-modal-2">Оставить заявку</a>
             <a href="uslugi/index.html" class="btn btn-outline btn-lg">Все услуги</a>
           </div>
           <div class="hero-stats">
-            <div class="stat"><strong>15+</strong><span>лет опыта</span></div>
+            <div class="stat"><strong data-count="15">0</strong><span>лет опыта</span></div>
             <div class="stat"><strong>Пн–Сб</strong><span>работаем</span></div>
             <div class="stat"><strong>Гарантия</strong><span>на работы</span></div>
           </div>
         </div>
-        <div class="hero-visual">
+        <div class="hero-visual" id="hero-visual">
           <img src="images/CkcHIy_Ey1Sjyj8IxnVeUe90UPR7CFFQQIZHgjcycolOiJgimlKnGfy2WF3TQdgTTnnxUpxA4AKVc8YbnyC_DJjgi_UCsO1r4Nk835QqUopK6SRe5-MFQrDoANm_y4ti1R7ukXnoDULjV3N3g8EtHzlBoD6MA8NPolAe-DzrS_ztWEDgMY9QdzCYghe0Kne9.jpg" alt="Автосервис US Service">
         </div>
       </div>
     </section>
 
+    <!-- FEATURES -->
     <div class="features-bar">
       <div class="container features-grid">
         <div class="feature">
@@ -70,7 +78,7 @@
         </div>
         <div class="feature">
           <div class="feature-icon">🧰</div>
-          <h3>Свой магазин</h3>
+          <h3><a href="https://www.usm.by/" target="_blank" style="color:inherit;text-decoration:none;">Свой магазин</a></h3>
           <p>Запчасти в одном месте</p>
         </div>
         <div class="feature">
@@ -86,6 +94,7 @@
       </div>
     </div>
 
+    <!-- SERVICES -->
     <section>
       <div class="container">
         <div class="section-label">Услуги</div>
@@ -156,6 +165,7 @@
       </div>
     </section>
 
+    <!-- PROCESS -->
     <section style="background:var(--bg-elevated); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
       <div class="container">
         <div class="section-label">Процесс</div>
@@ -166,16 +176,19 @@
             <h4>Диагностика</h4>
             <p>Проверка и поиск причины неисправности</p>
           </div>
+          <div class="step-divider"></div>
           <div class="step">
             <div class="step-num">2</div>
             <h4>Согласование</h4>
             <p>Стоимость и перечень работ до начала</p>
           </div>
+          <div class="step-divider"></div>
           <div class="step">
             <div class="step-num">3</div>
             <h4>Ремонт</h4>
             <p>Выполнение работ и замена деталей</p>
           </div>
+          <div class="step-divider"></div>
           <div class="step">
             <div class="step-num">4</div>
             <h4>Проверка</h4>
@@ -185,39 +198,44 @@
       </div>
     </section>
 
-    <section>
+    <!-- AMERICAN CARS -->
+    <section class="american-section">
       <div class="container">
         <div class="section-label">Специализация</div>
         <h2 class="section-title">Американские автомобили</h2>
         <p class="section-desc">Опыт работы с Chevrolet, Ford, Cadillac, Jeep и другими марками из США. Знаем типовые неисправности и имеем доступ к запчастям.</p>
-        <div class="brands" style="margin-bottom:28px;">
-          <a href="american-cars/index.html" class="brand-chip">CHEVROLET</a>
-          <a href="american-cars/index.html" class="brand-chip">FORD</a>
-          <a href="american-cars/index.html" class="brand-chip">CADILLAC</a>
-          <a href="american-cars/index.html" class="brand-chip">BUICK</a>
-          <a href="american-cars/index.html" class="brand-chip">DODGE</a>
-          <a href="american-cars/index.html" class="brand-chip">JEEP</a>
-          <a href="american-cars/index.html" class="brand-chip">GMC</a>
-          <a href="american-cars/index.html" class="brand-chip">LINCOLN</a>
+        <div class="american-content">
+          <div class="american-brands">
+            <a href="american-cars/index.html" class="brand-chip">CHEVROLET</a>
+            <a href="american-cars/index.html" class="brand-chip">FORD</a>
+            <a href="american-cars/index.html" class="brand-chip">CADILLAC</a>
+            <a href="american-cars/index.html" class="brand-chip">BUICK</a>
+            <a href="american-cars/index.html" class="brand-chip">DODGE</a>
+            <a href="american-cars/index.html" class="brand-chip">JEEP</a>
+            <a href="american-cars/index.html" class="brand-chip">GMC</a>
+            <a href="american-cars/index.html" class="brand-chip">LINCOLN</a>
+          </div>
         </div>
-        <a href="american-cars/index.html" class="btn btn-outline">Подробнее о ремонте американских авто</a>
+        <a href="american-cars/index.html" class="btn btn-outline" style="margin-top: 28px;">Подробнее о ремонте американских авто</a>
       </div>
     </section>
 
+    <!-- GALLERY -->
     <section>
       <div class="container">
         <div class="section-label">Сервис</div>
         <h2 class="section-title">Наш автосервис</h2>
-        <div class="gallery-grid" style="margin-top:28px;">
-          <div class="gallery-item"><img src="images/CkcHIy_Ey1Sjyj8IxnVeUe90UPR7CFFQQIZHgjcycolOiJgimlKnGfy2WF3TQdgTTnnxUpxA4AKVc8YbnyC_DJjgi_UCsO1r4Nk835QqUopK6SRe5-MFQrDoANm_y4ti1R7ukXnoDULjV3N3g8EtHzlBoD6MA8NPolAe-DzrS_ztWEDgMY9QdzCYghe0Kne9.jpg" alt=""></div>
-          <div class="gallery-item"><img src="images/hCZgiRXIxCpMTJBxfs5du797GFXWF8F4w9qW8PZs0Ov-5XbjsT-Uj9Aq1gXSd2NJ7iSslH_LkPOnr6IUpcZ1IT2jphQfz8KpF6okucZI85PNiBkUX64MiMBoIcvz0R45YGtdjd370eCqegZRiemoGgk4tPbbYAUj5tSbCA01GaLAjXJbheRh-5_YW1_njPMU.jpg" alt=""></div>
-          <div class="gallery-item"><img src="images/n7FtuuKuuTzt5Hz9zmZfIbJ62s2WXrx5-gHAqrUb23CcgIXSVN_pUatv4UzZUC2pIkNhVf22684RYA44XDlDOL6dUdJjw__zeCpgno3l9i_NRojxPrjo5LiF33Ukqr3Gm3SFRV6elWAun24jkP9L0_hkAXBB9LiRyAE3BxYTmc8F-edGqlWEs9uLCTjhpqOX.jpg" alt=""></div>
-          <div class="gallery-item"><img src="images/ph2JapkETXaYokvRRc3y_5gWYkNuzW9XHfb9mnd_MpW04xM1UIgkTHkk72z5ccsatBuRy-YiMYC5PdL3zLF3kGgdjvi1rLtI34rP1CVryth1GSDGXpF82dQFKdCAZqpsGzKyY3wSPfbTMHFx8yCkco3ognu-OuebaielI1Jos2vksFGDHbeXrsxCR-4NNqw1.jpg" alt=""></div>
-          <div class="gallery-item"><img src="images/4XipFBpd9At0jnsDMq2GxkWyF2CJRYbVQ3m6wlw3ApBI-mLyNDGXdTTCaQ5DCGjSBU8AXIR_hG51Z_IWL6IbYsSfaFiURGrt6MKJIfAz07gmwuDS_1MlnOL8uBrsmK9-YIOkwHwQeJKMw2ON3FRbNFbnxes3yJL-rN9C0-lyA8Rvmx8flxSCMulVlrsz0MyK.jpg" alt=""></div>
+        <div class="gallery-grid">
+          <a href="uslugi/diagnostika.html" class="gallery-item"><img src="images/CkcHIy_Ey1Sjyj8IxnVeUe90UPR7CFFQQIZHgjcycolOiJgimlKnGfy2WF3TQdgTTnnxUpxA4AKVc8YbnyC_DJjgi_UCsO1r4Nk835QqUopK6SRe5-MFQrDoANm_y4ti1R7ukXnoDULjV3N3g8EtHzlBoD6MA8NPolAe-DzrS_ztWEDgMY9QdzCYghe0Kne9.jpg" alt="Диагностика"><div class="gallery-overlay">Диагностика</div></a>
+          <a href="uslugi/zamena-masla.html" class="gallery-item"><img src="images/hCZgiRXIxCpMTJBxfs5du797GFXWF8F4w9qW8PZs0Ov-5XbjsT-Uj9Aq1gXSd2NJ7iSslH_LkPOnr6IUpcZ1IT2jphQfz8KpF6okucZI85PNiBkUX64MiMBoIcvz0R45YGtdjd370eCqegZRiemoGgk4tPbbYAUj5tSbCA01GaLAjXJbheRh-5_YW1_njPMU.jpg" alt="Замена масла"><div class="gallery-overlay">Замена масла</div></a>
+          <a href="uslugi/remont-dvigatelya.html" class="gallery-item"><img src="images/n7FtuuKuuTzt5Hz9zmZfIbJ62s2WXrx5-gHAqrUb23CcgIXSVN_pUatv4UzZUC2pIkNhVf22684RYA44XDlDOL6dUdJjw__zeCpgno3l9i_NRojxPrjo5LiF33Ukqr3Gm3SFRV6elWAun24jkP9L0_hkAXBB9LiRyAE3BxYTmc8F-edGqlWEs9uLCTjhpqOX.jpg" alt="Ремонт двигателя"><div class="gallery-overlay">Ремонт двигателя</div></a>
+          <a href="uslugi/remont-hodovoj-chasti.html" class="gallery-item"><img src="images/ph2JapkETXaYokvRRc3y_5gWYkNuzW9XHfb9mnd_MpW04xM1UIgkTHkk72z5ccsatBuRy-YiMYC5PdL3zLF3kGgdjvi1rLtI34rP1CVryth1GSDGXpF82dQFKdCAZqpsGzKyY3wSPfbTMHFx8yCkco3ognu-OuebaielI1Jos2vksFGDHbeXrsxCR-4NNqw1.jpg" alt="Ходовая"><div class="gallery-overlay">Ходовая</div></a>
+          <a href="uslugi/remont-tormoznoj-sistemy.html" class="gallery-item"><img src="images/4XipFBpd9At0jnsDMq2GxkWyF2CJRYbVQ3m6wlw3ApBI-mLyNDGXdTTCaQ5DCGjSBU8AXIR_hG51Z_IWL6IbYsSfaFiURGrt6MKJIfAz07gmwuDS_1MlnOL8uBrsmK9-YIOkwHwQeJKMw2ON3FRbNFbnxes3yJL-rN9C0-lyA8Rvmx8flxSCMulVlrsz0MyK.jpg" alt="Тормоза"><div class="gallery-overlay">Тормоза</div></a>
         </div>
       </div>
     </section>
 
+    <!-- CTA -->
     <section>
       <div class="container">
         <div class="cta-strip">
@@ -225,11 +243,25 @@
             <h3>Запишитесь на сервис</h3>
             <p>Перезвоним, уточним детали и подберём удобное время</p>
           </div>
-          <a href="kontakty.html#form" class="btn btn-primary btn-lg">Оставить заявку</a>
+          <a href="#" class="btn btn-primary btn-lg" id="cta-open-modal-3">Оставить заявку</a>
         </div>
       </div>
     </section>
   </main>
+
+  <!-- МОДАЛЬНОЕ ОКНО -->
+  <div class="modal-overlay" id="modal">
+    <div class="modal">
+      <button class="modal-close" id="modal-close">×</button>
+      <h3>Свяжитесь с нами</h3>
+      <form class="form" id="modal-form">
+        <input type="text" name="name" placeholder="Ваше имя" required>
+        <input type="tel" name="phone" placeholder="Телефон" required>
+        <textarea name="message" placeholder="Марка/модель или описание проблемы"></textarea>
+        <button type="submit" class="btn btn-primary" style="width:100%;">Отправить</button>
+      </form>
+    </div>
+  </div>
 
   <footer class="footer">
     <div class="container">
@@ -252,7 +284,7 @@
           <ul>
             <li><a href="o-kompanii.html">О компании</a></li>
             <li><a href="kontakty.html">Контакты</a></li>
-            <li><a href="https://www.usm.by/" target="_blank" rel="noopener">Магазин запчастей</a></li>
+            <li><a href="https://www.usm.by/" target="_blank">Магазин запчастей</a></li>
           </ul>
         </div>
         <div>
@@ -262,6 +294,7 @@
             <li><a href="tel:+375333058899">+375 (33) 305-88-99</a></li>
             <li>ул. Глаголева 39, Минск</li>
             <li>Пн–Пт 9–19 · Сб 10–16</li>
+            <li><a href="https://t.me/us_service" target="_blank">Telegram</a></li>
           </ul>
         </div>
       </div>
@@ -271,6 +304,8 @@
       </div>
     </div>
   </footer>
+
   <script src="js/main.js"></script>
+  <script src="js/home.js"></script>
 </body>
 </html>
