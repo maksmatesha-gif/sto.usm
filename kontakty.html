@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Контакты | US Service — СТО в Минске</title>
+  <meta name="description" content="Адрес и телефоны СТО US Service: ул. Глаголева 39, Минск. +375 (29) 302-88-99, +375 (33) 305-88-99. Пн–Пт 9–19, Сб 10–16.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo"><div class="logo-mark">US</div><span>US Service</span></a>
+      <nav class="nav">
+        <a href="uslugi/index.html">Услуги</a>
+        <a href="american-cars/index.html">Американские авто</a>
+        <a href="o-kompanii.html">О компании</a>
+        <a href="kontakty.html" class="active">Контакты</a>
+      </nav>
+      <div class="header-actions">
+        <a href="tel:+375293028899" class="phone">+375 (29) 302-88-99</a>
+        <a href="#form" class="btn btn-primary">Записаться</a>
+        <button class="menu-toggle">☰</button>
+      </div>
+    </div>
+  </header>
+  <div id="mobile-nav" class="mobile-nav">
+    <button class="close">×</button>
+    <a href="index.html">Главная</a>
+    <a href="uslugi/index.html">Услуги</a>
+    <a href="american-cars/index.html">Американские авто</a>
+    <a href="o-kompanii.html">О компании</a>
+    <a href="kontakty.html">Контакты</a>
+  </div>
+
+  <main class="main">
+    <div class="page-hero">
+      <div class="container">
+        <div class="breadcrumb"><a href="index.html">Главная</a> / Контакты</div>
+        <h1>Контакты</h1>
+        <p class="lead">Свяжитесь с нами удобным способом или оставьте заявку — перезвоним и подберём время визита.</p>
+      </div>
+    </div>
+
+    <section>
+      <div class="container">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;" class="contact-layout">
+          <div>
+            <h2 class="section-title" style="font-size:1.3rem;">Местоположение</h2>
+            <p style="color:var(--text-muted);margin-bottom:20px;"><strong style="color:var(--text);">г. Минск, ул. Глаголева 39</strong></p>
+            <div class="img-placeholder tall" style="margin-bottom:24px;">
+              [Место под карту Яндекс/Google<br>или фото фасада / въезда]
+            </div>
+            <h3 style="font-size:1rem;margin-bottom:12px;">Расписание</h3>
+            <p style="color:var(--text-muted);margin-bottom:8px;">Пн–Пт: 9:00–19:00</p>
+            <p style="color:var(--text-muted);margin-bottom:8px;">Сб: 10:00–16:00</p>
+            <p style="color:var(--text-muted);">Вс: выходной</p>
+          </div>
+          <div>
+            <h2 class="section-title" style="font-size:1.3rem;">Связь</h2>
+            <p style="color:var(--text-muted);margin-bottom:8px;">Телефоны:</p>
+            <p style="margin-bottom:16px;">
+              <a href="tel:+375293028899" style="font-size:1.2rem;font-weight:700;">+375 (29) 302-88-99</a><br>
+              <a href="tel:+375333058899" style="font-size:1.2rem;font-weight:700;">+375 (33) 305-88-99</a>
+            </p>
+            <p style="color:var(--text-muted);margin-bottom:8px;">Email:</p>
+            <p style="margin-bottom:28px;"><a href="mailto:info@usm.by" style="color:var(--accent);">info@usm.by</a></p>
+
+            <div id="form" class="sidebar-card" style="padding:28px;">
+              <h3 style="margin-bottom:16px;">Обратный звонок / заявка</h3>
+              <form class="form" data-form>
+                <input type="text" name="name" placeholder="Ваше имя" required>
+                <input type="tel" name="phone" placeholder="Телефон" required>
+                <select name="service">
+                  <option value="">Услуга (необязательно)</option>
+                  <option>Диагностика</option>
+                  <option>Замена масла</option>
+                  <option>Шиномонтаж</option>
+                  <option>Ремонт ходовой</option>
+                  <option>Ремонт двигателя</option>
+                  <option>Американские авто</option>
+                  <option>Другое</option>
+                </select>
+                <textarea name="message" placeholder="Марка/модель или описание проблемы"></textarea>
+                <button type="submit" class="btn btn-primary" style="width:100%;">Отправить</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <style>
+    @media (max-width: 760px) {
+      .contact-layout { grid-template-columns: 1fr !important; }
+    }
+  </style>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="logo" style="margin-bottom:14px;display:inline-flex;"><div class="logo-mark">US</div><span>US Service</span></a>
+          <p>Автосервис в Минске</p>
+        </div>
+        <div>
+          <h4>Услуги</h4>
+          <ul>
+            <li><a href="uslugi/index.html">Все услуги</a></li>
+            <li><a href="american-cars/index.html">Американские авто</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Компания</h4>
+          <ul>
+            <li><a href="o-kompanii.html">О компании</a></li>
+            <li><a href="https://www.usm.by/" target="_blank">Магазин запчастей</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Контакты</h4>
+          <ul>
+            <li>+375 (29) 302-88-99</li>
+            <li>ул. Глаголева 39</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom"><span>© 2026 СТО «US Service»</span></div>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
