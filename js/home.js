@@ -47,27 +47,39 @@ if (heroVisual) {
 
 // ===== MODAL WINDOW =====
 const modal = document.getElementById('modal');
-const openBtns = document.querySelectorAll('#cta-open-modal, #cta-open-modal-2');
 const closeBtn = document.getElementById('modal-close');
 
-openBtns.forEach(btn => {
-  btn.addEventListener('click', (e) => {
-    e.preventDefault();
-    modal.classList.add('open');
-  });
-});
-closeBtn.addEventListener('click', () => modal.classList.remove('open'));
-modal.addEventListener('click', (e) => {
-  if (e.target === modal) modal.classList.remove('open');
+function openModal(e) {
+  if (e) e.preventDefault();
+  if (modal) modal.classList.add('open');
+}
+
+// All buttons that should open the modal
+document.querySelectorAll(
+  '#cta-open-modal, #cta-open-modal-2, #cta-open-modal-3, #mobile-cta-open-modal, [data-open-modal]'
+).forEach(btn => {
+  btn.addEventListener('click', openModal);
 });
 
+if (closeBtn) {
+  closeBtn.addEventListener('click', () => modal.classList.remove('open'));
+}
+if (modal) {
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) modal.classList.remove('open');
+  });
+}
+
 // ===== FORM SUBMIT =====
-document.getElementById('modal-form').addEventListener('submit', function(e) {
-  e.preventDefault();
-  alert('Спасибо! Мы свяжемся с вами в ближайшее время.');
-  this.reset();
-  modal.classList.remove('open');
-});
+const modalForm = document.getElementById('modal-form');
+if (modalForm) {
+  modalForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('Спасибо! Мы свяжемся с вами в ближайшее время.');
+    this.reset();
+    modal.classList.remove('open');
+  });
+}
 
 // ===== PREFERS REDUCED MOTION =====
 if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {

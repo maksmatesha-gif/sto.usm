@@ -45,30 +45,26 @@
 
     <section>
       <div class="container">
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;" class="contact-layout">
-          <div>
-            <h2 class="section-title" style="font-size:1.3rem;">Местоположение</h2>
-            <p style="color:var(--text-muted);margin-bottom:20px;"><strong style="color:var(--text);">г. Минск, ул. Глаголева 39</strong></p>
-            <div class="img-placeholder tall" style="margin-bottom:24px;">
-              [Место под карту Яндекс/Google<br>или фото фасада / въезда]
-            </div>
-            <h3 style="font-size:1rem;margin-bottom:12px;">Расписание</h3>
-            <p style="color:var(--text-muted);margin-bottom:8px;">Пн–Пт: 9:00–19:00</p>
-            <p style="color:var(--text-muted);margin-bottom:8px;">Сб: 10:00–16:00</p>
-            <p style="color:var(--text-muted);">Вс: выходной</p>
+        <div class="contact-layout">
+          <div class="contact-info">
+            <h2>Местоположение</h2>
+            <p><strong style="color:var(--text);">г. Минск, ул. Глаголева 39</strong></p>
+            <img src="images/facade.jpg" alt="Фасад СТО US Service" class="service-img tall" style="margin:20px 0;">
+            <h3 style="font-size:1rem;margin:20px 0 10px;color:var(--text);">Расписание</h3>
+            <p>Пн–Пт: 9:00–19:00</p>
+            <p>Сб: 10:00–16:00</p>
+            <p>Вс: выходной</p>
           </div>
-          <div>
-            <h2 class="section-title" style="font-size:1.3rem;">Связь</h2>
-            <p style="color:var(--text-muted);margin-bottom:8px;">Телефоны:</p>
-            <p style="margin-bottom:16px;">
-              <a href="tel:+375293028899" style="font-size:1.2rem;font-weight:700;">+375 (29) 302-88-99</a><br>
-              <a href="tel:+375333058899" style="font-size:1.2rem;font-weight:700;">+375 (33) 305-88-99</a>
-            </p>
-            <p style="color:var(--text-muted);margin-bottom:8px;">Email:</p>
+          <div class="contact-form-side">
+            <h2>Связь</h2>
+            <p style="color:var(--text-muted);margin-bottom:6px;">Телефоны:</p>
+            <a href="tel:+375293028899" class="phone-big">+375 (29) 302-88-99</a>
+            <a href="tel:+375333058899" class="phone-big">+375 (33) 305-88-99</a>
+            <p style="color:var(--text-muted);margin:16px 0 6px;">Email:</p>
             <p style="margin-bottom:28px;"><a href="mailto:info@usm.by" style="color:var(--accent);">info@usm.by</a></p>
 
-            <div id="form" class="sidebar-card" style="padding:28px;">
-              <h3 style="margin-bottom:16px;">Обратный звонок / заявка</h3>
+            <div id="form" class="contact-form-card">
+              <h3>Обратный звонок / заявка</h3>
               <form class="form" data-form>
                 <input type="text" name="name" placeholder="Ваше имя" required>
                 <input type="tel" name="phone" placeholder="Телефон" required>
@@ -91,12 +87,6 @@
       </div>
     </section>
   </main>
-
-  <style>
-    @media (max-width: 760px) {
-      .contact-layout { grid-template-columns: 1fr !important; }
-    }
-  </style>
 
   <footer class="footer">
     <div class="container">
